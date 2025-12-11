@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balasubramanian Ramamoorthy - Data Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #764ba2;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-category li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #fff;
+        }
+
+        .experience-item {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+
+        .experience-item h3 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .company-info {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .duration {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .tech-stack {
+            background: #667eea;
+            color: white;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px 5px 15px 0;
+            font-size: 0.9em;
+        }
+
+        .responsibilities {
+            margin-top: 15px;
+        }
+
+        .responsibilities li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .responsibilities li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .certifications {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .cert-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .summary-highlights {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .summary-highlights li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .summary-highlights li:before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Balasubramanian Ramamoorthy</h1>
+            <p class="tagline">Specialist Data Engineer | AWS, Databricks & Data Platform Architect</p>
+            <div class="contact-info">
+                <a href="mailto:balasmdb@gmail.com">📧 balasmdb@gmail.com</a>
+                <a href="tel:+919976921187">📱 +91-9976921187</a>
+                <a href="https://linkedin.com/in/balasubramanian-ramamoorthy" target="_blank">💼 LinkedIn</a>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2>About Me</h2>
+            <div class="summary-highlights">
+                <ul>
+                <li>Over eight years of experience in Information Technology, specializing in AWS, Apache Spark, ETL, and enterprise database management.</li>
+                <li>Proven track record designing and delivering end-to-end data pipelines and workflows using AWS Glue, Databricks, and SnapLogic.</li>
+                <li>Hands-on experience architecting and implementing data warehouses, data lakes, and lakehouses to enable scalable analytics and reporting.</li>
+                <li>Strong expertise in SQL, Python, and PySpark for data transformation, optimization, and engineering at scale.</li>
+                <li>Effective communicator and team leader with experience mentoring engineers and driving successful delivery of data projects.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Certifications</h2>
+            <div class="certifications">
+                <div class="cert-badge">🎓 Databricks Data Engineer Associate</div>
+                <div class="cert-badge">☁️ AWS Solution Architect Associate</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Cloud Platforms</h3>
+                    <ul>
+                        <li>AWS EventBridge</li>
+                        <li>AWS Lambda</li>
+                        <li>AWS Step Functions</li>
+                        <li>Amazon Athena</li>
+                        <li>Amazon S3</li>
+                        <li>Amazon SQS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Warehousing</h3>
+                    <ul>
+                        <li>Amazon Redshift</li>
+                        <li>SQL Server</li>
+                        <li>Databricks</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>ETL Tools</h3>
+                    <ul>
+                        <li>AWS Glue</li>
+                        <li>Databricks</li>
+                        <li>SnapLogic</li>
+                        <li>SSIS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>SQL</li>
+                        <li>Python</li>
+                        <li>PySpark</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <h3>Specialist Data Engineer</h3>
+                <p class="company-info">Agilisium Consulting | Universal Music Group</p>
+                <p class="duration">March 2021 - Present</p>
+                
+                <div>
+                    <span class="tech-stack">AWS Glue</span>
+                    <span class="tech-stack">Lambda</span>
+                    <span class="tech-stack">Step Functions</span>
+                    <span class="tech-stack">S3</span>
+                    <span class="tech-stack">Redshift</span>
+                    <span class="tech-stack">SnapLogic</span>
+                </div>
+
+                <p><strong>Project:</strong> AWS Glue Migration & Data Pipeline Development</p>
+                <ul class="responsibilities">
+                    <li>Transforming SnapLogic pipelines and their ETL logic into AWS Glue scripts</li>
+                    <li>Optimizing data workflows to improve performance and efficiency within AWS Glue</li>
+                    <li>Worked independently on designing, developing, deploying and monitoring pipelines to process large amounts of data</li>
+                    <li>Developed auditing and error handling mechanisms storing data in relational databases</li>
+                    <li>Implemented best practices for data transformation, validation, and loading processes</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Redshift Developer</h3>
+                <p class="company-info">DataWens Technologies | Hydropoint Data System</p>
+                <p class="duration">February 2020 - March 2021</p>
+                
+                <div>
+                    <span class="tech-stack">Redshift</span>
+                    <span class="tech-stack">S3</span>
+                    <span class="tech-stack">Lambda</span>
+                    <span class="tech-stack">SSIS</span>
+                    <span class="tech-stack">SSRS</span>
+                </div>
+
+                <p><strong>Project:</strong> Building Data Warehouse and Reports for Clients</p>
+                <ul class="responsibilities">
+                    <li>Designed, developed, tested and maintained Data Warehouse built in Amazon Redshift</li>
+                    <li>Designed and developed SSIS pipelines handling data migration from multiple sources including SQL Server, Netsuite, and Salesforce</li>
+                    <li>Achieved historical data load on Redshift using PowerShell scripts and AWS Lambda as ETL</li>
+                    <li>Developed SSRS reports for client requirements</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Software Engineer</h3>
+                <p class="company-info">Agilisium Consulting | Universal Music Group</p>
+                <p class="duration">March 2018 - January 2020</p>
+                
+                <div>
+                    <span class="tech-stack">Redshift</span>
+                    <span class="tech-stack">SQL Server</span>
+                    <span class="tech-stack">Informatica</span>
+                    <span class="tech-stack">SnapLogic</span>
+                </div>
+
+                <p><strong>Project:</strong> Migration from SQL Server to Amazon Redshift</p>
+                <ul class="responsibilities">
+                    <li>Migrated client's historical and current data from SQL Server to Amazon Redshift</li>
+                    <li>Built SnapLogic pipelines performing data integration on Amazon Redshift from various sources</li>
+                    <li>Collaborated with team members in establishing design and development techniques for ETL processes</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Process Associate</h3>
+                <p class="company-info">First Source Private Limited | Bharti Airtel Ltd</p>
+                <p class="duration">December 2016 - December 2017</p>
+                
+                <div>
+                    <span class="tech-stack">MS-SQL Server</span>
+                    <span class="tech-stack">MS-Access</span>
+                </div>
+
+                <p><strong>Project:</strong> BADDEBT Analysis</p>
+                <ul class="responsibilities">
+                    <li>Planned, designed, and implemented database objects including stored procedures and views</li>
+                    <li>Improved processes by identifying new automations and reducing cycle time of reports</li>
+                    <li>Supported production operations with focus on integration and development</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <h3>Bachelor of Engineering in Computer Science</h3>
+            <p class="company-info">Madha Engineering College, Chennai, Tamil Nadu</p>
+            <p class="duration">August 2012 - April 2016</p>
+        </div>
+
+        <footer>
+            <p>© 2024 Balasubramanian Ramamoorthy | Data Engineer Portfolio</p>
+        </footer>
+    </div>
+</body>
+</html>
